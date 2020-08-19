@@ -11,21 +11,20 @@ const IndexPage = ({ data }) => {
 
    return (
       <Layout>
-         <SEO title="Home">
+         <SEO title="Home" />
             <div>
                {edges.map(item => {
                   const { node } = item
                   const { frontmatter } = node
 
                   return (
-                  <Link to={`/${node.frontmatter.path}`} key={node.frontmatter.path}>
-                     <h1 >{node.frontmatter.title}</h1>
+                  <Link to={`/${frontmatter.path}`} key={frontmatter.path}>
+                     <h1 >{frontmatter.title}</h1>
                   </Link>
                )
                })}
             </div>
             <Link to="/page-2/">Go to page 2</Link>
-         </SEO>
       </Layout>
    )
 }
