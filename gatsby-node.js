@@ -9,18 +9,18 @@ exports.createPages = ({ graphql, actions }) => {
    return graphql(
       `
       {
-      allMarkdownRemark {
-         edges {
-            node {
-            html
-            frontmatter {
-               title
-               date(formatString: "DD/MM")
-               path
-            }
+         allMarkdownRemark {
+            edges {
+               node {
+               html
+               frontmatter {
+                  title
+                  date(formatString: "DD/MM")
+                  path
+               }
+               }
             }
          }
-      }
       }
       `
    ).then (result => {

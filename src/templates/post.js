@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = ({ data }) => {
+const Post = ({ data }) => {
    const { html, frontmatter } = data.markdownRemark;
    const { title, date } = frontmatter;
 
@@ -33,4 +33,4 @@ export const pageQuery = graphql`
    }
 `;
 
-export default IndexPage
+export default Post
